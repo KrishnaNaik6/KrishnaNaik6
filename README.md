@@ -1,6 +1,6 @@
 - 👋 Hi, I’m KrishnaNaik
 - 👀 I’m interested in AI Ml and full stack
-- 🌱 I’m currently learning DSA 
+- 🌱 I’m currently learning DSA, MERN 
 - 📫 How to reach me kn670423@gmail.com
 - 😄 Pronouns: He/him
 - ⚡ Fun fact: I can't obstruct me from coding + learning
