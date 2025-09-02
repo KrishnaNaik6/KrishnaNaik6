@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning DSA, MERN 
 - 📫 How to reach me kn670423@gmail.com
 - 😄 Pronouns: He/him
-- ⚡ Fun fact: I can't obstruct me from coding and learning
+- ⚡ Fun fact: I can't obstruct me fromlearning
 
 <!---
 KrishnaNaik6/KrishnaNaik6 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
