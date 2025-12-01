@@ -119,15 +119,6 @@ Recognizes digits using deep learning.
 
 ---
 
-# ⚙️ Auto-Updating Charts (GitHub Actions)
-
-Your charts update automatically every day using:
-
-
-This regenerates the PNG chart images and commits them back into your repository so your README always stays updated.
-
----
-
 # 📬 Contact Me
 
 <p align="center">
