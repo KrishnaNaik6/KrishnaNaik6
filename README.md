@@ -1,149 +1,146 @@
-- 👋 Hi, I’m KrishnaNaik
-- 👀 I’m interested in AI Ml and full stack
-- 🌱 I’m currently learning DSA, MERN 
-- 📫 How to reach me kn670423@gmail.com
-- 😄 Pronouns: He/him
-- ⚡ Fun fact: I can't obstruct me fromlearning
-
-<!---
-KrishnaNaik6/KrishnaNaik6 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-<!--
-👋 Welcome to your new GitHub Profile README!
-This file uses Markdown and some inline HTML/CSS for enhanced styling.
-Remember to replace all placeholder content (like [Your Name], links, and descriptions) with your actual information.
--->
-
-<div align="center">
-<!-- Title & Greeting -->
-<h1>
-Hey there! I'm [Your Name] 👋
-</h1>
-
-<p>
-A passionate Software Engineer | Full-Stack Developer | Data Enthusiast
-</p>
-
-<!-- Animated Typing Effect (Optional - GitHub Gists or external tools sometimes add this) -->
-
-<!-- For now, we'll keep it simple and static in pure markdown -->
-
-</div>
-
-<div align="center">
-<!--
-SECTION: About Me
-Use emojis to make it engaging!
--->
-<h3>🚀 About Me</h3>
-
-<p>
-I'm a goal-driven developer with a strong focus on building scalable and efficient applications.
-I love tackling complex problems and learning new technologies to deliver high-quality code.
-</p>
-
-<p>
-🔭 I’m currently working on: <strong>[A cool project name or technology]</strong>
-
-
-
-
-
-🌱 I’m always learning: <strong>[New skill, e.g., Kubernetes, Rust, or a new framework]</strong>
-
-
-
-
-
-💬 Ask me about: <strong>[Your expertise, e.g., TypeScript, Cloud Infrastructure, or Performance Optimization]</strong>
-
-
-
-
-
-📫 How to reach me: <strong>[Your professional email address]</strong>
-
-
-
-
-
-⚡ Fun fact: <strong>[A short, interesting fact about you]</strong>
-</p>
-</div>
-
-<div align="center">
-<!--
-SECTION: Tech Stack & Tools
-Use shields.io for professional-looking badges.
-Replace the links and colors with the badges for your actual tech stack.
--->
-<h3>🛠️ My Core Tech Stack</h3>
-
-<p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3Dblack" alt="JavaScript" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/React-61DAFB%3Fstyle%3Dfor-the-badge%26logo%3Dreact%26logoColor%3Dblack" alt="React" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Node.js-339933%3Fstyle%3Dfor-the-badge%26logo%3Dnodedotjs%26logoColor%3Dwhite" alt="Node.js" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Python-3776AB%3Fstyle%3Dfor-the-badge%26logo%3Dpython%26logoColor%3Dwhite" alt="Python" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Go-00ADD8%3Fstyle%3Dfor-the-badge%26logo%3Dgo%26logoColor%3Dwhite" alt="Go" />
-</p>
-
-<p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/PostgreSQL-4169E1%3Fstyle%3Dfor-the-badge%26logo%3Dpostgresql%26logoColor%3Dwhite" alt="PostgreSQL" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/MongoDB-47A248%3Fstyle%3Dfor-the-badge%26logo%3Dmongodb%26logoColor%3Dwhite" alt="MongoDB" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Docker-2496ED%3Fstyle%3Dfor-the-badge%26logo%3Ddocker%26logoColor%3Dwhite" alt="Docker" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/AWS-232F3E%3Fstyle%3Dfor-the-badge%26logo%3Damazonaws%26logoColor%3Dwhite" alt="AWS" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Jira-0052CC%3Fstyle%3Dfor-the-badge%26logo%3Djira%26logoColor%3Dwhite" alt="Jira" />
-</p>
-</div>
-
-<div align="center">
-<!--
-SECTION: GitHub Stats & Streak
-NOTE: These are links to popular external services that generate images based on your GitHub profile.
-Remember to replace 'YOUR-GITHUB-USERNAME' with your actual username in the URLs!
--->
-<h3>📊 GitHub Stats</h3>
-
-<a href="https://www.google.com/search?q=https://github.com/YOUR-GITHUB-USERNAME">
-<img
-src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DYOUR-GITHUB-USERNAME%26show_icons%3Dtrue%26theme%3Dbuefy%26hide_border%3Dtrue%26count_private%3Dtrue"
-alt="YOUR-GITHUB-USERNAME's GitHub Stats"
-style="margin: 10px;"
-/>
-</a>
-<a href="https://www.google.com/search?q=https://github.com/YOUR-GITHUB-USERNAME">
-<img
-src="https://www.google.com/search?q=https://github-readme-streak-stats.herokuapp.com/%3Fuser%3DYOUR-GITHUB-USERNAME%26theme%3Dbuefy%26hide_border%3Dtrue"
-alt="YOUR-GITHUB-USERNAME's GitHub Streak"
-style="margin: 10px;"
-/>
-</a>
-</div>
-
-<div align="center">
-<!--
-SECTION: Connect
-Add links to your social profiles.
--->
-<h3>🤝 Connect with Me</h3>
-
-<a href="https://www.google.com/search?q=https://linkedin.com/in/YOUR-LINKEDIN-PROFILE" target="_blank">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-0077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" alt="LinkedIn" />
-</a>
-<a href="https://www.google.com/search?q=https://twitter.com/YOUR-TWITTER-HANDLE" target="_blank">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Twitter-1DA1F2%3Fstyle%3Dfor-the-badge%26logo%3Dtwitter%26logoColor%3Dwhite" alt="Twitter" />
-</a>
-<a href="https://YOUR-PERSONAL-WEBSITE.com" target="_blank">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Portfolio-FF5722%3Fstyle%3Dfor-the-badge%26logo%3Dwordpress%26logoColor%3Dwhite" alt="Portfolio" />
-</a>
-</div>
-
-<!--
-A small motivational quote or footer can be a nice touch
--->
+<!-- ===================================================== -->
+<!--  DARK • NEON • ANIMATED • AUTO-UPDATING GITHUB README -->
+<!-- ===================================================== -->
 
 <p align="center">
-&mdash; Happy Coding! ✨ &mdash;
+  <img src="assets/banner-dark-neon.svg" width="100%" />
 </p>
+
+<h2 align="center" style="color:#7ef9ff;">AI Engineer • Full-Stack Developer • Automation Enthusiast</h2>
+
+---
+
+## 🖤 About Me
+I’m **Krishna Naik**, a passionate programmer focused on:
+
+- 🚀 AI & Automation  
+- 🎨 Web Design (UI/UX + Modern Frontend)  
+- 💻 MERN Stack Full-Stack Development  
+- 🤖 Machine Learning & Data Science  
+- 📱 Building Web, Mobile & Desktop Apps  
+
+I love solving real-world problems using **React, MERN, and Python**, while creating visually appealing and optimized user experiences.
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend**
+<p>
+  <img src="https://skillicons.dev/icons?i=react,html,css,tailwind,vite,js" />
+</p>
+
+### **Backend**
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,express" />
+</p>
+
+### **Databases**
+<p>
+  <img src="https://skillicons.dev/icons?i=mongodb" />
+  <img height="40" src="https://img.shields.io/badge/OracleDB-red?logo=oracle&logoColor=white" />
+</p>
+
+### **AI / ML**
+<p>
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,opencv" />
+  <img height="32" src="https://img.shields.io/badge/Numpy-4D8EFF?logo=numpy&logoColor=white" />
+  <img height="32" src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" />
+</p>
+
+### **Tools**
+<p>
+  <img src="https://skillicons.dev/icons?i=vscode,git,github,postman,docker" />
+  <img height="40" src="https://img.shields.io/badge/VMware-607078?logo=vmware&logoColor=white" />
+</p>
+
+### **Cloud**
+<p>
+  <img src="https://skillicons.dev/icons?i=vercel" />
+</p>
+
+---
+
+# 📊 My Growth — Animated SVG + Auto-updating PNGs
+
+### **📈 Projects Completed Over Years (Animated SVG)**
+
+<p align="center">
+  <img src="assets/charts/projects-growth.svg"
+       width="720"
+       onerror="this.onerror=null; this.src='assets/charts/projects-growth.png'" />
+</p>
+
+---
+
+### **📊 Technologies Learned Over Years (Animated SVG)**
+
+<p align="center">
+  <img src="assets/charts/tech-learned.svg"
+       width="720"
+       onerror="this.onerror=null; this.src='assets/charts/tech-learned.png'" />
+</p>
+
+> 🔁 PNG versions are automatically updated daily using **GitHub Actions**.
+
+---
+
+# 🔥 Featured Projects
+
+### 1️⃣ **Voice-Based PPT Controller**
+Control PowerPoint using speech commands.  
+**Tech:** Python · SpeechRecognition · PyAudio · OpenCV  
+🔗 Repository: *coming soon*
+
+---
+
+### 2️⃣ **Daily Activity Manager + Portfolio Website**
+A custom dashboard + portfolio + Google Drive API integration.  
+**Tech:** MERN · Tailwind · Vercel  
+🔗 Repository: *coming soon*
+
+---
+
+### 3️⃣ **Handwritten Digit Recognition (CNN)**
+Recognizes digits using deep learning.  
+**Tech:** Python · TensorFlow · OpenCV  
+🔗 Repository: *coming soon*
+
+---
+
+# 📈 GitHub Stats (Dark Mode)
+
+<p align="center">
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=krishnanaik&theme=tokyonight&show_icons=true" />
+  <img height="150" src="https://github-readme-streak-stats.herokuapp.com/?user=krishnanaik&theme=tokyonight" />
+</p>
+
+<p align="center">
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnanaik&layout=compact&theme=tokyonight" />
+</p>
+
+---
+
+# ⚙️ Auto-Updating Charts (GitHub Actions)
+
+Your charts update automatically every day using:
+
+
+This regenerates the PNG chart images and commits them back into your repository so your README always stays updated.
+
+---
+
+# 📬 Contact Me
+
+<p align="center">
+  <a href="mailto:your-email@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+</p>
+
+---
+
+<p align="center" style="opacity:0.7;">
+🚀 Dark Neon GitHub Profile • © 2025 Krishna Naik  
+</p>
+

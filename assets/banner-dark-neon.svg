@@ -1,0 +1,49 @@
+<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ef9ff"/>
+      <stop offset="100%" stop-color="#9b59ff"/>
+    </linearGradient>
+
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="260" fill="#040b18"/>
+
+  <!-- Abstract neon waves -->
+  <path d="M0 180 Q300 100 600 180 T1200 180"
+        stroke="url(#neonGrad)"
+        stroke-width="6"
+        fill="transparent"
+        opacity="0.35"
+        filter="url(#neonGlow)"/>
+
+  <path d="M0 140 Q300 60 600 140 T1200 140"
+        stroke="url(#neonGrad)"
+        stroke-width="3"
+        fill="transparent"
+        opacity="0.2"/>
+
+  <!-- Title -->
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Segoe UI" font-size="54"
+        fill="url(#neonGrad)"
+        filter="url(#neonGlow)"
+        letter-spacing="4">
+    KRISHNA NAIK
+  </text>
+
+  <!-- Subtitle -->
+  <text x="50%" y="68%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Segoe UI" font-size="22"
+        fill="#bcdcff" opacity="0.85">
+    AI Engineer • Full-Stack Developer • Automation Enthusiast
+  </text>
+</svg>
