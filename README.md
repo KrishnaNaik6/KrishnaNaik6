@@ -65,15 +65,11 @@ I love solving real-world problems using **React, MERN, and Python**, while crea
 
 ### **📈 Projects Completed Over Years (Animated SVG)**
 
-<!-- <p align="center">
+<p align="center">
   <img src="assets/charts/projects-growth.svg"
        width="720"
        onerror="this.onerror=null; this.src='assets/charts/projects-growth.png'" />
-</p> -->
-<p align="center">
-<img src="assets/charts/projects-growth.svg" alt="Projects Growth" width="720" onerror="this.onerror=null;this.src='assets/charts/projects-growth.png'" />
 </p>
----
 
 ### **📊 Technologies Learned Over Years (Animated SVG)**
 
