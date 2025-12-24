@@ -109,7 +109,7 @@ Recognizes digits using deep learning.
 # 📈 GitHub Stats (Dark Mode)
 
 <p align="center">
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=krishnanaik&theme=tokyonight&show_icons=true" />
+  <img src="https://github-readme-stats.vercel.app/api?username=krishnanaik&theme=tokyonight&show_icons=true&cache_seconds=1800" />
   <img height="150" src="https://github-readme-streak-stats.herokuapp.com/?user=krishnanaik&theme=tokyonight" />
 </p>
 
