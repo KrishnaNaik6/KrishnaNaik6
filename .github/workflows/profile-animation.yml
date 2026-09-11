@@ -1,0 +1,99 @@
+name: Generate Animated Profile Avatar
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/profile-animation.yml'
+      - 'README.md'
+  schedule:
+    - cron: '23 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Build animated avatar
+        env:
+          AVATAR_URL: https://github.com/KrishnaNaik6.png?size=512
+        run: |
+          python - <<'PY'
+          import io, math, os, urllib.request
+          from PIL import Image, ImageDraw, ImageFilter
+
+          size = 520
+          frames = []
+          avatar_url = os.environ['AVATAR_URL']
+          avatar = Image.open(io.BytesIO(urllib.request.urlopen(avatar_url).read())).convert('RGBA')
+          avatar = avatar.resize((250, 250), Image.Resampling.LANCZOS)
+
+          mask = Image.new('L', (250, 250), 0)
+          ImageDraw.Draw(mask).ellipse((0, 0, 249, 249), fill=255)
+          avatar.putalpha(mask)
+
+          for frame in range(36):
+              t = frame / 36
+              img = Image.new('RGBA', (size, size), (8, 12, 24, 255))
+              glow = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+              gd = ImageDraw.Draw(glow)
+
+              # Animated neon orbit rings behind the profile photo.
+              for radius, phase, alpha in [(150, 0.0, 190), (174, 0.25, 130), (198, 0.5, 90)]:
+                  offset = (t + phase) * 2 * math.pi
+                  bbox = (size//2-radius, size//2-radius, size//2+radius, size//2+radius)
+                  gd.arc(bbox, start=math.degrees(offset), end=math.degrees(offset)+105, fill=(65, 220, 255, alpha), width=7)
+                  gd.arc(bbox, start=math.degrees(offset)+180, end=math.degrees(offset)+285, fill=(150, 90, 255, alpha), width=5)
+
+              # Floating particles.
+              for i in range(22):
+                  angle = 2 * math.pi * ((i / 22) + t * (0.45 if i % 2 else -0.3))
+                  radius = 165 + 24 * math.sin(i * 1.7)
+                  x = size/2 + radius * math.cos(angle)
+                  y = size/2 + radius * math.sin(angle)
+                  r = 2 + (i % 3)
+                  gd.ellipse((x-r, y-r, x+r, y+r), fill=(120, 220, 255, 150))
+
+              glow = glow.filter(ImageFilter.GaussianBlur(8))
+              img.alpha_composite(glow)
+
+              # Crisp rings over the glow.
+              draw = ImageDraw.Draw(img)
+              pulse = 1 + 0.025 * math.sin(2 * math.pi * t)
+              r = int(138 * pulse)
+              draw.ellipse((size//2-r, size//2-r, size//2+r, size//2+r), outline=(95, 225, 255, 210), width=3)
+              r2 = int(132 * pulse)
+              draw.ellipse((size//2-r2, size//2-r2, size//2+r2, size//2+r2), outline=(155, 95, 255, 180), width=2)
+
+              # Avatar stays in front of the animation.
+              img.alpha_composite(avatar, (135, 135))
+              draw = ImageDraw.Draw(img)
+              draw.ellipse((134, 134, 386, 386), outline=(220, 245, 255, 235), width=4)
+
+              frames.append(img.convert('P', palette=Image.Palette.ADAPTIVE, colors=128))
+
+          os.makedirs('assets', exist_ok=True)
+          frames[0].save('assets/profile-animation.gif', save_all=True, append_images=frames[1:], duration=75, loop=0, optimize=True, disposal=2)
+          PY
+
+      - name: Commit generated animation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/profile-animation.gif
+          git diff --cached --quiet || git commit -m 'chore: update animated profile avatar'
+          git push
