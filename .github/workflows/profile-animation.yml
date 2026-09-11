@@ -26,9 +26,11 @@ jobs:
           python-version: '3.x'
 
       - name: Install Pillow
-        run: python -m pip install --disable-pip-version-check pillow
+        uses: pypa/gh-action-pip@v1
+        with:
+          packages: pillow
 
-      - name: Build animated avatar
+      - name: Build professional animated avatar
         env:
           AVATAR_URL: https://github.com/KrishnaNaik6.png?size=512
         run: |
@@ -36,58 +38,82 @@ jobs:
           import io, math, os, urllib.request
           from PIL import Image, ImageDraw, ImageFilter
 
-          size = 520
+          SIZE = 420
+          AVATAR_SIZE = 210
           frames = []
-          avatar_url = os.environ['AVATAR_URL']
-          avatar = Image.open(io.BytesIO(urllib.request.urlopen(avatar_url).read())).convert('RGBA')
-          avatar = avatar.resize((250, 250), Image.Resampling.LANCZOS)
 
-          mask = Image.new('L', (250, 250), 0)
-          ImageDraw.Draw(mask).ellipse((0, 0, 249, 249), fill=255)
+          avatar = Image.open(io.BytesIO(urllib.request.urlopen(os.environ['AVATAR_URL']).read())).convert('RGBA')
+          avatar = avatar.resize((AVATAR_SIZE, AVATAR_SIZE), Image.Resampling.LANCZOS)
+
+          mask = Image.new('L', (AVATAR_SIZE, AVATAR_SIZE), 0)
+          ImageDraw.Draw(mask).ellipse((0, 0, AVATAR_SIZE - 1, AVATAR_SIZE - 1), fill=255)
           avatar.putalpha(mask)
 
-          for frame in range(36):
-              t = frame / 36
-              img = Image.new('RGBA', (size, size), (8, 12, 24, 255))
-              glow = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+          for frame_no in range(32):
+              t = frame_no / 32
+              img = Image.new('RGBA', (SIZE, SIZE), (7, 11, 22, 255))
+
+              glow = Image.new('RGBA', (SIZE, SIZE), (0, 0, 0, 0))
               gd = ImageDraw.Draw(glow)
 
-              # Animated neon orbit rings behind the profile photo.
-              for radius, phase, alpha in [(150, 0.0, 190), (174, 0.25, 130), (198, 0.5, 90)]:
-                  offset = (t + phase) * 2 * math.pi
-                  bbox = (size//2-radius, size//2-radius, size//2+radius, size//2+radius)
-                  gd.arc(bbox, start=math.degrees(offset), end=math.degrees(offset)+105, fill=(65, 220, 255, alpha), width=7)
-                  gd.arc(bbox, start=math.degrees(offset)+180, end=math.degrees(offset)+285, fill=(150, 90, 255, alpha), width=5)
+              # Slow rotating neon orbit arcs.
+              for radius, phase, width, alpha in [
+                  (122, 0.00, 7, 210),
+                  (145, 0.33, 5, 155),
+                  (168, 0.66, 3, 105),
+              ]:
+                  angle = (t + phase) * 360
+                  bbox = (SIZE//2-radius, SIZE//2-radius, SIZE//2+radius, SIZE//2+radius)
+                  gd.arc(bbox, angle, angle + 105, fill=(45, 210, 255, alpha), width=width)
+                  gd.arc(bbox, angle + 180, angle + 285, fill=(155, 95, 255, alpha), width=max(2, width-2))
 
-              # Floating particles.
-              for i in range(22):
-                  angle = 2 * math.pi * ((i / 22) + t * (0.45 if i % 2 else -0.3))
-                  radius = 165 + 24 * math.sin(i * 1.7)
-                  x = size/2 + radius * math.cos(angle)
-                  y = size/2 + radius * math.sin(angle)
-                  r = 2 + (i % 3)
-                  gd.ellipse((x-r, y-r, x+r, y+r), fill=(120, 220, 255, 150))
+              # Subtle moving particles.
+              for i in range(18):
+                  angle = 2 * math.pi * (i / 18 + t * (0.35 if i % 2 else -0.22))
+                  radius = 150 + 18 * math.sin(i * 1.9)
+                  x = SIZE/2 + radius * math.cos(angle)
+                  y = SIZE/2 + radius * math.sin(angle)
+                  r = 2 + i % 2
+                  gd.ellipse((x-r, y-r, x+r, y+r), fill=(100, 220, 255, 170))
 
-              glow = glow.filter(ImageFilter.GaussianBlur(8))
-              img.alpha_composite(glow)
+              img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(9)))
 
-              # Crisp rings over the glow.
+              # Crisp orbit lines.
               draw = ImageDraw.Draw(img)
-              pulse = 1 + 0.025 * math.sin(2 * math.pi * t)
-              r = int(138 * pulse)
-              draw.ellipse((size//2-r, size//2-r, size//2+r, size//2+r), outline=(95, 225, 255, 210), width=3)
-              r2 = int(132 * pulse)
-              draw.ellipse((size//2-r2, size//2-r2, size//2+r2, size//2+r2), outline=(155, 95, 255, 180), width=2)
+              for radius, phase, width in [(122, 0.00, 3), (145, 0.33, 2)]:
+                  angle = (t + phase) * 360
+                  bbox = (SIZE//2-radius, SIZE//2-radius, SIZE//2+radius, SIZE//2+radius)
+                  draw.arc(bbox, angle, angle + 105, fill=(80, 225, 255, 225), width=width)
+                  draw.arc(bbox, angle + 180, angle + 285, fill=(175, 110, 255, 190), width=width)
 
-              # Avatar stays in front of the animation.
-              img.alpha_composite(avatar, (135, 135))
+              # Centered real GitHub profile image, always in front.
+              offset = (SIZE - AVATAR_SIZE) // 2
+              img.alpha_composite(avatar, (offset, offset))
               draw = ImageDraw.Draw(img)
-              draw.ellipse((134, 134, 386, 386), outline=(220, 245, 255, 235), width=4)
+              draw.ellipse((offset-3, offset-3, offset+AVATAR_SIZE+2, offset+AVATAR_SIZE+2), outline=(225, 248, 255, 235), width=4)
 
-              frames.append(img.convert('P', palette=Image.Palette.ADAPTIVE, colors=128))
+              frames.append(img)
 
           os.makedirs('assets', exist_ok=True)
-          frames[0].save('assets/profile-animation.gif', save_all=True, append_images=frames[1:], duration=75, loop=0, optimize=True, disposal=2)
+          frames[0].save(
+              'assets/profile-animation.gif',
+              save_all=True,
+              append_images=frames[1:],
+              duration=85,
+              loop=0,
+              optimize=False,
+              disposal=2,
+          )
+          PY
+
+      - name: Verify GIF
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          im = Image.open('assets/profile-animation.gif')
+          print(f'GIF: {im.size[0]}x{im.size[1]}, frames={getattr(im, "n_frames", 1)}')
+          assert im.size == (420, 420)
+          assert getattr(im, 'n_frames', 1) > 1
           PY
 
       - name: Commit generated animation
