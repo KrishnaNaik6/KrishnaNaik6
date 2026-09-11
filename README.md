@@ -1,17 +1,17 @@
 <div align="center">
 
-<img src="./assets/profile-animation.gif" width="180" height="180" alt="Krishna Umesh Naik — animated profile avatar" />
+<img src="./assets/profile-banner.gif" width="100%" alt="Krishna Umesh Naik — animated professional profile banner" />
 
-# KRISHNA UMESH NAIK
-
-### Computer Science (AI & ML) Student · Full-Stack Developer · AI/ML Builder
-
-**Bengaluru, Karnataka** · **+91 93536 40765** · **kn670423@gmail.com**
+<br />
 
 <a href="https://github.com/KrishnaNaik6"><img src="https://img.shields.io/badge/GitHub-KrishnaNaik6-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 <a href="https://www.linkedin.com/in/krishnaunaik/"><img src="https://img.shields.io/badge/LinkedIn-Krishna%20Naik-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="https://krishna-naik.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-krishna--naik.vercel.app-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
 <a href="mailto:kn670423@gmail.com"><img src="https://img.shields.io/badge/Email-kn670423%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+
+<br />
+
+**Bengaluru, Karnataka** · **+91 93536 40765** · **kn670423@gmail.com**
 
 </div>
 
