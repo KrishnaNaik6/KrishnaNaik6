@@ -1,0 +1,59 @@
+name: Generate Animated Profile Avatar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Build animated avatar
+        shell: bash
+        run: |
+          set -e
+          mkdir -p assets
+          curl -L --fail --retry 3 "https://github.com/KrishnaNaik6.png?size=500" -o /tmp/avatar.png
+
+          for i in $(seq 0 23); do
+            angle=$((i * 15))
+            offset=$((i * 3))
+            convert -size 560x560 xc:none \
+              -stroke "#00D4FF" -strokewidth 7 -fill none \
+              -draw "circle 280,280 $((280+offset)),280" \
+              -stroke "#7C3AED" -strokewidth 4 \
+              -draw "circle 280,280 $((250-offset/2)),280" \
+              -rotate "$angle" \
+              -blur 0x1 \
+              /tmp/ring.png
+
+            convert /tmp/avatar.png -resize 420x420^ -gravity center -crop 420x420+0+0 +repage \
+              \( +clone -alpha extract -threshold 0 -blur 0x1 \) \
+              -alpha off /tmp/avatar-square.png
+
+            convert -size 560x560 xc:none \
+              /tmp/ring.png -composite \
+              /tmp/avatar-square.png -gravity center -geometry +0+0 -composite \
+              -resize 280x280 \
+              /tmp/frame-${i}.png
+          done
+
+          convert -delay 7 -loop 0 /tmp/frame-*.png -layers Optimize assets/profile-avatar.gif
+
+      - name: Commit animation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/profile-avatar.gif
+          git diff --cached --quiet || git commit -m "chore: update animated profile avatar"
+          git push
