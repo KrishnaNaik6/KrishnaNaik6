@@ -148,28 +148,31 @@ Implemented a multi-node Hadoop and Spark cluster for distributed data processin
 
 ## 📊 GitHub — Live Activity & Real-Time Metrics
 
-The cards below are **generated from GitHub data**, rather than manually entered or fabricated numbers.
+The previous third-party stats cards were removed because their public hosted endpoints are currently unreliable. The GitHub Stats project itself recommends self-hosting or GitHub Actions for reliable cards, and its public Vercel deployment has had documented outages. urlGitHub Stats reliability noteshttps://github.com/anuraghazra/github-readme-stats#deploy-on-your-own
+
+### 🟩 Live GitHub Contribution Activity
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=KrishnaNaik6&show_icons=true&hide_border=true&theme=github_dark&rank_icon=github&include_all_commits=true" alt="Krishna's GitHub statistics" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KrishnaNaik6&layout=compact&hide_border=true&theme=github_dark&langs_count=8" alt="Krishna's most used languages" />
-
-<br />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=KrishnaNaik6&hide_border=true&theme=github-dark-blue" alt="Krishna's GitHub contribution streak" />
+<a href="https://github.com/KrishnaNaik6">
+<img src="https://github.com/users/KrishnaNaik6/contributions" alt="Krishna Naik's GitHub contribution activity" width="900" />
+</a>
 
 </div>
 
-### 🔥 Recent GitHub Activity
+This contribution calendar is served directly by **GitHub**, so the activity shown is your actual GitHub contribution history rather than manually entered or dummy data.
+
+### 📈 Live GitHub Signals
 
 <div align="center">
 
-[![Krishna's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=KrishnaNaik6&theme=github-compact&hide_border=true&area=true&custom_title=Krishna%20Naik%20%E2%80%94%20GitHub%20Activity)](https://github.com/KrishnaNaik6)
+<a href="https://github.com/KrishnaNaik6"><img src="https://img.shields.io/github/followers/KrishnaNaik6?label=Followers&style=for-the-badge&logo=github" alt="GitHub followers" /></a>
+<a href="https://github.com/KrishnaNaik6"><img src="https://img.shields.io/github/last-commit/KrishnaNaik6/KrishnaNaik6?label=Profile%20Repo%20Last%20Commit&style=for-the-badge&logo=github" alt="Profile repository last commit" /></a>
+<a href="https://github.com/KrishnaNaik6"><img src="https://img.shields.io/github/commit-activity/y/KrishnaNaik6/KrishnaNaik6?label=Profile%20Repo%20Commits&style=for-the-badge&logo=github" alt="Profile repository commit activity" /></a>
 
 </div>
 
-> The activity graph is a live view of GitHub activity and is not a manually populated activity timeline.
+> **Why this is better:** no fabricated contribution numbers are hardcoded here. GitHub itself supplies the contribution calendar, while the badges read live repository/account signals.
 
 ---
 
@@ -177,11 +180,10 @@ The cards below are **generated from GitHub data**, rather than manually entered
 
 <div align="center">
 
-<a href="https://github.com/KrishnaNaik6/AURA"><img src="https://github-readme-stats.vercel.app/api/pin/?username=KrishnaNaik6&repo=AURA&theme=github_dark&hide_border=true" alt="AURA" /></a>
-<a href="https://github.com/KrishnaNaik6/SmartKirana"><img src="https://github-readme-stats.vercel.app/api/pin/?username=KrishnaNaik6&repo=SmartKirana&theme=github_dark&hide_border=true" alt="SmartKirana" /></a>
-
-<a href="https://github.com/KrishnaNaik6/DocAgent"><img src="https://github-readme-stats.vercel.app/api/pin/?username=KrishnaNaik6&repo=DocAgent&theme=github_dark&hide_border=true" alt="DocAgent" /></a>
-<a href="https://github.com/KrishnaNaik6/Explainable-AI-Diagram-Generator"><img src="https://github-readme-stats.vercel.app/api/pin/?username=KrishnaNaik6&repo=Explainable-AI-Diagram-Generator&theme=github_dark&hide_border=true" alt="Explainable AI Diagram Generator" /></a>
+<a href="https://github.com/KrishnaNaik6/AURA"><img src="https://img.shields.io/badge/AURA-Personal%20AI%20OS-111827?style=for-the-badge&logo=github" alt="AURA" /></a>
+<a href="https://github.com/KrishnaNaik6/SmartKirana"><img src="https://img.shields.io/badge/SmartKirana-AI%20Retail-111827?style=for-the-badge&logo=github" alt="SmartKirana" /></a>
+<a href="https://github.com/KrishnaNaik6/DocAgent"><img src="https://img.shields.io/badge/DocAgent-RAG%20%26%20Agents-111827?style=for-the-badge&logo=github" alt="DocAgent" /></a>
+<a href="https://github.com/KrishnaNaik6/Explainable-AI-Diagram-Generator"><img src="https://img.shields.io/badge/Explainable%20AI-Diagram%20Generator-111827?style=for-the-badge&logo=github" alt="Explainable AI Diagram Generator" /></a>
 
 </div>
 
