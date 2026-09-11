@@ -148,7 +148,19 @@ Implemented a multi-node Hadoop and Spark cluster for distributed data processin
 
 ## 📊 GitHub — Live Activity & Real-Time Metrics
 
-The previous third-party stats cards were removed because their public hosted endpoints are currently unreliable. The GitHub Stats project itself recommends self-hosting or GitHub Actions for reliable cards, and its public Vercel deployment has had documented outages. urlGitHub Stats reliability noteshttps://github.com/anuraghazra/github-readme-stats#deploy-on-your-own
+### 🐍 Animated Contribution Graph
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KrishnaNaik6/KrishnaNaik6/main/dist/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KrishnaNaik6/KrishnaNaik6/main/dist/github-snake.svg" />
+  <img alt="Animated GitHub contribution graph" src="https://raw.githubusercontent.com/KrishnaNaik6/KrishnaNaik6/main/dist/github-snake.svg" width="900" />
+</picture>
+
+</div>
+
+The animation is generated automatically from **KrishnaNaik6's real GitHub contribution activity** by GitHub Actions and refreshed daily.
 
 ### 🟩 Live GitHub Contribution Activity
 
@@ -160,8 +172,6 @@ The previous third-party stats cards were removed because their public hosted en
 
 </div>
 
-This contribution calendar is served directly by **GitHub**, so the activity shown is your actual GitHub contribution history rather than manually entered or dummy data.
-
 ### 📈 Live GitHub Signals
 
 <div align="center">
@@ -172,11 +182,11 @@ This contribution calendar is served directly by **GitHub**, so the activity sho
 
 </div>
 
-> **Why this is better:** no fabricated contribution numbers are hardcoded here. GitHub itself supplies the contribution calendar, while the badges read live repository/account signals.
+> **No fabricated contribution numbers are hardcoded here.** The contribution calendar and animation are generated from GitHub activity, while the badges read live repository/account signals.
 
 ---
 
-## 📌 Public Projects on GitHub
+## 📌 Featured GitHub Projects
 
 <div align="center">
 
