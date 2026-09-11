@@ -120,29 +120,109 @@ Implemented a multi-node Hadoop and Spark cluster for distributed data processin
 
 ## 🧰 Technical Skills
 
-### Programming Languages
-`Python` · `C` · `JavaScript` · `TypeScript` · `SQL` · `Java`
+### 🧊 3D Skills Matrix
 
-### Frontend
-`React.js` · `Next.js` · `Vite` · `Tailwind CSS` · `React Native`
+<div align="center">
 
-### Backend
-`Node.js` · `Express.js` · `NestJS` · `Django` · `REST APIs` · `Redis` · `BullMQ`
+<a href="https://www.python.org/"><img src="https://skillicons.dev/icons?i=python&theme=dark" width="76" alt="Python" /></a>
+<a href="https://www.cprogramming.com/"><img src="https://skillicons.dev/icons?i=c&theme=dark" width="76" alt="C" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=javascript&theme=dark" width="76" alt="JavaScript" /></a>
+<a href="https://www.typescriptlang.org/"><img src="https://skillicons.dev/icons?i=typescript&theme=dark" width="76" alt="TypeScript" /></a>
+<a href="https://www.java.com/"><img src="https://skillicons.dev/icons?i=java&theme=dark" width="76" alt="Java" /></a>
+<a href="https://www.postgresql.org/"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="76" alt="PostgreSQL" /></a>
+<a href="https://react.dev/"><img src="https://skillicons.dev/icons?i=react&theme=dark" width="76" alt="React" /></a>
+<a href="https://nodejs.org/"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" width="76" alt="Node.js" /></a>
+<a href="https://nestjs.com/"><img src="https://skillicons.dev/icons?i=nestjs&theme=dark" width="76" alt="NestJS" /></a>
+<a href="https://www.docker.com/"><img src="https://skillicons.dev/icons?i=docker&theme=dark" width="76" alt="Docker" /></a>
+<a href="https://redis.io/"><img src="https://skillicons.dev/icons?i=redis&theme=dark" width="76" alt="Redis" /></a>
+<a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="76" alt="Git" /></a>
 
-### Databases
-`MySQL` · `PostgreSQL` · `MongoDB`
+<br />
 
-### AI / ML
-`Machine Learning` · `Deep Learning` · `Computer Vision` · `NLP` · `Generative AI` · `Agentic AI` · `RAG`
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3D%20Core-111827?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" /></a>
+<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3D%20Core-111827?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript" /></a>
+<a href="https://react.dev/"><img src="https://img.shields.io/badge/React-3D%20Stack-111827?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
+<a href="https://nestjs.com/"><img src="https://img.shields.io/badge/NestJS-3D%20Stack-111827?style=for-the-badge&logo=nestjs&logoColor=E0234E" alt="NestJS" /></a>
+<a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-3D%20Ops-111827?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" /></a>
 
-### Tools & Platforms
-`Git` · `GitHub` · `Docker` · `Linux` · `Postman` · `Vercel`
+</div>
 
-### Testing
-`Jest` · `Unit Testing`
+### 💠 Languages
 
-### Coursework
-`DSA` · `OOP` · `DBMS` · `Operating Systems` · `Computer Networks` · `Hadoop` · `Spark` · `Data Management`
+<div align="center">
+
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3D%20Language%20Card-111827?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-3D%20Language%20Card-111827?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" /></a>
+<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3D%20Language%20Card-111827?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript" /></a>
+<a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-3D%20Language%20Card-111827?style=for-the-badge&logo=openjdk&logoColor=ED8B00" alt="Java" /></a>
+<a href="https://en.cppreference.com/w/c"><img src="https://img.shields.io/badge/C-3D%20Language%20Card-111827?style=for-the-badge&logo=c&logoColor=A8B9CC" alt="C" /></a>
+<a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/SQL-3D%20Language%20Card-111827?style=for-the-badge&logo=mysql&logoColor=4479A1" alt="SQL" /></a>
+
+</div>
+
+### ⚛️ Frameworks & Runtime
+
+<div align="center">
+
+<a href="https://react.dev/"><img src="https://img.shields.io/badge/React-3D%20Framework-111827?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
+<a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-3D%20Framework-111827?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF" alt="Next.js" /></a>
+<a href="https://reactnative.dev/"><img src="https://img.shields.io/badge/React%20Native-3D%20Framework-111827?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" /></a>
+<a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-3D%20Runtime-111827?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" /></a>
+<a href="https://nestjs.com/"><img src="https://img.shields.io/badge/NestJS-3D%20Framework-111827?style=for-the-badge&logo=nestjs&logoColor=E0234E" alt="NestJS" /></a>
+<a href="https://expressjs.com/"><img src="https://img.shields.io/badge/Express.js-3D%20Framework-111827?style=for-the-badge&logo=express&logoColor=FFFFFF" alt="Express.js" /></a>
+<a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-3D%20Framework-111827?style=for-the-badge&logo=django&logoColor=44B78B" alt="Django" /></a>
+<a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-3D%20Framework-111827?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI" /></a>
+
+</div>
+
+### 🗄️ Databases · Cloud · DevOps
+
+<div align="center">
+
+<a href="https://www.postgresql.org/"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="70" alt="PostgreSQL" /></a>
+<a href="https://www.mongodb.com/"><img src="https://skillicons.dev/icons?i=mongodb&theme=dark" width="70" alt="MongoDB" /></a>
+<a href="https://www.mysql.com/"><img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="70" alt="MySQL" /></a>
+<a href="https://redis.io/"><img src="https://skillicons.dev/icons?i=redis&theme=dark" width="70" alt="Redis" /></a>
+<a href="https://www.docker.com/"><img src="https://skillicons.dev/icons?i=docker&theme=dark" width="70" alt="Docker" /></a>
+<a href="https://www.linux.org/"><img src="https://skillicons.dev/icons?i=linux&theme=dark" width="70" alt="Linux" /></a>
+<a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="70" alt="Git" /></a>
+<a href="https://github.com/"><img src="https://skillicons.dev/icons?i=github&theme=dark" width="70" alt="GitHub" /></a>
+<a href="https://vercel.com/"><img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="70" alt="Vercel" /></a>
+
+<br />
+
+<a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-3D%20Data%20Core-111827?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" /></a>
+<a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-3D%20DevOps-111827?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" /></a>
+<a href="https://redis.io/"><img src="https://img.shields.io/badge/Redis-3D%20Cache-111827?style=for-the-badge&logo=redis&logoColor=DC382D" alt="Redis" /></a>
+
+</div>
+
+### 🧠 AI / ML · Vision · Data
+
+<div align="center">
+
+<a href="https://pytorch.org/"><img src="https://skillicons.dev/icons?i=pytorch&theme=dark" width="70" alt="PyTorch" /></a>
+<a href="https://www.tensorflow.org/"><img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" width="70" alt="TensorFlow" /></a>
+<a href="https://opencv.org/"><img src="https://img.shields.io/badge/OpenCV-3D%20Vision%20Lab-111827?style=for-the-badge&logo=opencv&logoColor=5C3EE8" alt="OpenCV" /></a>
+<a href="https://huggingface.co/"><img src="https://img.shields.io/badge/Hugging%20Face-3D%20AI%20Lab-111827?style=for-the-badge&logo=huggingface&logoColor=FFD21E" alt="Hugging Face" /></a>
+<a href="https://ollama.com/"><img src="https://img.shields.io/badge/Ollama-3D%20Local%20AI-111827?style=for-the-badge&logo=ollama&logoColor=FFFFFF" alt="Ollama" /></a>
+<a href="https://spark.apache.org/"><img src="https://img.shields.io/badge/Spark-3D%20Data%20Engine-111827?style=for-the-badge&logo=apachespark&logoColor=E25A1C" alt="Apache Spark" /></a>
+
+</div>
+
+### 🛠️ Engineering Toolkit
+
+<div align="center">
+
+<a href="https://www.postman.com/"><img src="https://img.shields.io/badge/Postman-3D%20API%20Lab-111827?style=for-the-badge&logo=postman&logoColor=FF6C37" alt="Postman" /></a>
+<a href="https://jestjs.io/"><img src="https://img.shields.io/badge/Jest-3D%20Test%20Lab-111827?style=for-the-badge&logo=jest&logoColor=C21325" alt="Jest" /></a>
+<a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind%20CSS-3D%20UI%20Engine-111827?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind CSS" /></a>
+<a href="https://vite.dev/"><img src="https://img.shields.io/badge/Vite-3D%20Build%20Engine-111827?style=for-the-badge&logo=vite&logoColor=646CFF" alt="Vite" /></a>
+<a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-3D%20Package%20Engine-111827?style=for-the-badge&logo=npm&logoColor=CB3837" alt="npm" /></a>
+
+</div>
+
+> **Design note:** GitHub profile READMEs can render images and GIFs, but repository-rendered SVGs do not support inline scripting or animation. The skills section therefore uses layered icon tiles plus clickable “3D” badge cards to create depth without relying on unsupported page-level JavaScript/CSS. citeturn544072search0turn544072search3
 
 ---
 
