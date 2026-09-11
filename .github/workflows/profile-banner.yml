@@ -1,6 +1,11 @@
 name: Generate Professional Profile Banner
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/profile-banner.yml'
+      - 'README.md'
   schedule:
     - cron: '17 0 * * 0'
   workflow_dispatch:
@@ -41,12 +46,9 @@ jobs:
           ImageDraw.Draw(mask).ellipse((0, 0, 229, 229), fill=255)
           avatar.putalpha(mask)
 
-          try:
-              font_big = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 42)
-              font_mid = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 22)
-              font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 16)
-          except Exception:
-              font_big = font_mid = font_small = ImageFont.load_default()
+          font_big = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 42)
+          font_mid = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 22)
+          font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 16)
 
           frames = []
           for f in range(FRAMES):
@@ -54,12 +56,10 @@ jobs:
               img = Image.new('RGBA', (W, H), (5, 9, 20, 255))
               d = ImageDraw.Draw(img)
 
-              # Deep gradient-like horizontal bands.
               for y in range(H):
                   p = y / H
                   d.line((0, y, W, y), fill=(5 + int(8*p), 10 + int(12*p), 25 + int(25*p), 255))
 
-              # Perspective grid: subtle 3D floor.
               horizon = 280
               for x in range(-600, W + 700, 60):
                   d.line((W//2 + (x-W//2)*0.08, horizon, x, H), fill=(35, 85, 130, 45), width=1)
@@ -69,14 +69,12 @@ jobs:
               glow = Image.new('RGBA', (W, H), (0, 0, 0, 0))
               gd = ImageDraw.Draw(glow)
 
-              # Large moving neon arcs behind the hero.
               for radius, phase, alpha in [(210, 0.0, 120), (270, 0.32, 85), (340, 0.62, 55)]:
                   box = (W//2-radius, 175-radius, W//2+radius, 175+radius)
                   a = (t + phase) * 360
                   gd.arc(box, a, a+90, fill=(40, 205, 255, alpha), width=5)
                   gd.arc(box, a+180, a+265, fill=(160, 80, 255, alpha), width=4)
 
-              # Depth particles / stars.
               for i in range(70):
                   seed = i * 17.31
                   x0 = (seed * 73) % W
@@ -86,7 +84,6 @@ jobs:
                   alpha = 45 + (i % 5) * 18
                   gd.ellipse((x0+drift-r, y0-r, x0+drift+r, y0+r), fill=(100, 215, 255, alpha))
 
-              # Floating 3D cubes on the sides.
               for i, (cx, cy, s) in enumerate([(90,95,24),(1060,90,28),(1010,235,18),(180,260,16)]):
                   bob = math.sin(t*2*math.pi + i) * 7
                   x, y = cx, cy + bob
@@ -96,9 +93,8 @@ jobs:
                   gd.line((x,y,x+s,y-s//2), fill=(80,220,255,100), width=2)
 
               img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(8)))
-
-              # Crisp 3D/circuit accents.
               d = ImageDraw.Draw(img)
+
               for i, (cx, cy) in enumerate([(90,95),(1060,90),(1010,235),(180,260)]):
                   bob = math.sin(t*2*math.pi + i) * 7
                   x, y = cx, cy + bob
@@ -107,7 +103,6 @@ jobs:
                   d.line(pts+[pts[0]], fill=(95,225,255,190), width=2)
                   d.line((x-s,y-s//2,x,y), fill=(175,105,255,180), width=2)
 
-              # Avatar halo and avatar.
               pulse = 1 + 0.035 * math.sin(t*2*math.pi)
               r = int(130*pulse)
               d.ellipse((145-r, 175-r, 145+r, 175+r), outline=(70,215,255,180), width=3)
@@ -116,13 +111,11 @@ jobs:
               d = ImageDraw.Draw(img)
               d.ellipse((27,57,263,293), outline=(230,250,255,235), width=4)
 
-              # Professional hero typography.
               d.text((310, 88), 'KRISHNA UMESH NAIK', font=font_big, fill=(235, 244, 255, 255))
               d.text((313, 145), 'AI & ML  •  FULL-STACK  •  INTELLIGENT SYSTEMS', font=font_mid, fill=(110, 220, 255, 245))
               d.text((313, 188), 'Building practical AI systems, scalable software', font=font_mid, fill=(190, 205, 225, 225))
               d.text((313, 218), 'and production-ready digital experiences.', font=font_mid, fill=(190, 205, 225, 225))
 
-              # Animated status line.
               scan_x = 310 + int((W-350) * ((t*1.4) % 1))
               d.line((313, 260, 1070, 260), fill=(60, 110, 160, 80), width=1)
               d.ellipse((scan_x-4, 256, scan_x+4, 264), fill=(80, 230, 255, 230))
@@ -133,7 +126,6 @@ jobs:
                   d.text((x+13,294), label, font=font_small, fill=(175,225,255,230))
 
               d.text((313, 355), '●  OPEN TO BUILDING • LEARNING • SHIPPING', font=font_small, fill=(120,190,220,190))
-
               frames.append(img.convert('P', palette=Image.Palette.ADAPTIVE, colors=128))
 
           os.makedirs('assets', exist_ok=True)
