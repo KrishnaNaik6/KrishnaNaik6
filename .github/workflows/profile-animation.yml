@@ -26,9 +26,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install Pillow
-        uses: pypa/gh-action-pip@v1
-        with:
-          packages: pillow
+        run: python -m pip install --disable-pip-version-check pillow
 
       - name: Build professional animated avatar
         env:
@@ -52,22 +50,15 @@ jobs:
           for frame_no in range(32):
               t = frame_no / 32
               img = Image.new('RGBA', (SIZE, SIZE), (7, 11, 22, 255))
-
               glow = Image.new('RGBA', (SIZE, SIZE), (0, 0, 0, 0))
               gd = ImageDraw.Draw(glow)
 
-              # Slow rotating neon orbit arcs.
-              for radius, phase, width, alpha in [
-                  (122, 0.00, 7, 210),
-                  (145, 0.33, 5, 155),
-                  (168, 0.66, 3, 105),
-              ]:
+              for radius, phase, width, alpha in [(122, 0.00, 7, 210), (145, 0.33, 5, 155), (168, 0.66, 3, 105)]:
                   angle = (t + phase) * 360
                   bbox = (SIZE//2-radius, SIZE//2-radius, SIZE//2+radius, SIZE//2+radius)
                   gd.arc(bbox, angle, angle + 105, fill=(45, 210, 255, alpha), width=width)
                   gd.arc(bbox, angle + 180, angle + 285, fill=(155, 95, 255, alpha), width=max(2, width-2))
 
-              # Subtle moving particles.
               for i in range(18):
                   angle = 2 * math.pi * (i / 18 + t * (0.35 if i % 2 else -0.22))
                   radius = 150 + 18 * math.sin(i * 1.9)
@@ -77,33 +68,22 @@ jobs:
                   gd.ellipse((x-r, y-r, x+r, y+r), fill=(100, 220, 255, 170))
 
               img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(9)))
-
-              # Crisp orbit lines.
               draw = ImageDraw.Draw(img)
+
               for radius, phase, width in [(122, 0.00, 3), (145, 0.33, 2)]:
                   angle = (t + phase) * 360
                   bbox = (SIZE//2-radius, SIZE//2-radius, SIZE//2+radius, SIZE//2+radius)
                   draw.arc(bbox, angle, angle + 105, fill=(80, 225, 255, 225), width=width)
                   draw.arc(bbox, angle + 180, angle + 285, fill=(175, 110, 255, 190), width=width)
 
-              # Centered real GitHub profile image, always in front.
               offset = (SIZE - AVATAR_SIZE) // 2
               img.alpha_composite(avatar, (offset, offset))
               draw = ImageDraw.Draw(img)
               draw.ellipse((offset-3, offset-3, offset+AVATAR_SIZE+2, offset+AVATAR_SIZE+2), outline=(225, 248, 255, 235), width=4)
-
               frames.append(img)
 
           os.makedirs('assets', exist_ok=True)
-          frames[0].save(
-              'assets/profile-animation.gif',
-              save_all=True,
-              append_images=frames[1:],
-              duration=85,
-              loop=0,
-              optimize=False,
-              disposal=2,
-          )
+          frames[0].save('assets/profile-animation.gif', save_all=True, append_images=frames[1:], duration=85, loop=0, optimize=False, disposal=2)
           PY
 
       - name: Verify GIF
