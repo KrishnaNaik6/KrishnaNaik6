@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/KrishnaNaik6.png?size=180" width="140" height="140" alt="Krishna Umesh Naik" style="border-radius:50%" />
+<img src="https://raw.githubusercontent.com/KrishnaNaik6/KrishnaNaik6/main/assets/profile-avatar.gif" width="180" height="180" alt="Krishna Umesh Naik — animated profile avatar" />
 
 # KRISHNA UMESH NAIK
 
