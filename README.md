@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/profile-banner.gif" width="100%" alt="Krishna Umesh Naik — animated professional profile banner" />
+<!-- <img src="./assets/profile-banner.gif" width="100%" alt="Krishna Umesh Naik — animated professional profile banner" /> -->
 
 <br />
 
